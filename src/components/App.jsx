@@ -7,7 +7,6 @@ export const App = () => {
   const [good, setGoodFeedback] = useState(0);
   const [neutral, setNeutralFeedback] = useState(0);
   const [bad, setBadFeedback] = useState(0);
-  const options = ['good', 'neutral', 'bad'];
   const onFeedbackButtonClick = evt => {
     switch (evt.target.name) {
       case 'good':
@@ -47,7 +46,7 @@ export const App = () => {
     >
       <Section title="Please, leave your feedback">
         <FeedbackOptions
-          options={options}
+          options={Object.keys({ good, neutral, bad })}
           onLeaveFeedback={onFeedbackButtonClick}
         />
       </Section>
