@@ -9,7 +9,6 @@ export const App = () => {
   const [bad, setBadFeedback] = useState(0);
   const options = ['good', 'neutral', 'bad'];
   const onFeedbackButtonClick = evt => {
-    // const newStateName = evt.target.textContent;
     switch (evt.target.name) {
       case 'good':
         setGoodFeedback(good + 1);
